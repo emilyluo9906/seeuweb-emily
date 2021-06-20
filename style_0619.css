@@ -1,0 +1,30 @@
+h1 {
+	color: grey;
+}
+/* class */
+.big-text {
+	font-size: 40px;
+}
+.small-text {
+	font-size: 15px;
+}
+.regular-text {
+	font-size: 25px;
+}
+.blue {
+	color: blue;
+}
+.monospace{
+	font-family: monospace;
+}
+.font-size-20{
+	font-size: 20px;
+}
+/* id */
+#text1 {
+	background-color: grey;
+}
+/* select all - apply to all content in the html*/
+* {
+	/* default settings*/
+}

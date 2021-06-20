@@ -1,0 +1,35 @@
+* {
+	text-align: center;
+}
+#title {
+	margin-top: 300px;
+	font-weight: bold;
+}
+#search-input {
+	width: 300px;
+	height: 20px;
+	text-align: left;
+}
+#footer{
+	margin-top: 150px;
+	font-size: smaller;
+}
+#footer .icf{
+	color: grey;
+	font-size: x-small;
+}
+.red {
+	color: red;
+}
+.bg-blue {
+	background-color: blue;
+	color: white;
+	font-size: smaller;
+}
+.space-out {
+	letter-spacing: 3px;
+}
+.current-page {
+	text-decoration: none;
+	color: black;
+}
