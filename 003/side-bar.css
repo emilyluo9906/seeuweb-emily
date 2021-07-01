@@ -1,0 +1,14 @@
+a {
+	display: block;
+	background-color: grey;
+	width: 400px;
+	height: 50px;
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-size: large;
+	color: whitesmoke;
+	padding: 5px;
+}
+a:hover {
+	background-color: gold;
+}

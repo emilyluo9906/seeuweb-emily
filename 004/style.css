@@ -1,0 +1,88 @@
+* { /* standardize all browser config before setting customized styles */
+	margin: 0;
+	padding: 0;
+}
+
+.border {
+	border-style: solid;
+}
+#practice {
+	width: 200px;
+	height: 200px;
+	border-style: solid;
+	border-color: blue;
+	border-width: 1px;
+	border-top-color: red;
+	border-bottom-style: dotted;
+}
+.padding {
+	padding: 10px;
+	background-color: beige;
+}
+.banner-node {
+	padding: 10px;
+	text-decoration: none;
+}
+.padding-practice {
+	border-top-style: solid;
+	border-top-color: #ff8500;
+	border-top-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #edeef0;
+	border-bottom-width: 1px;
+	height: 41px;
+	background-color: #fcfcfc;
+	color: #4c4c4c;
+}
+.margin {
+	margin: 0 auto; /* make block center horizontally (!need a width */
+					/* 0 -- top bottom margin; auto -- left right margin */
+	width: 200px;
+	height: 200px;
+	background-color: beige;
+	text-align: center; /* make text inside center horizontally */
+}
+.css3 {
+	margin: 0 auto;
+	width: 500px;
+	height: 500px;
+	background-color: beige;
+	font-size: 20px;
+	box-shadow: 5px 5px grey;
+	text-align: center;
+	border-radius: 50px;
+}
+.float-standard {
+	background-color: grey;
+	height: 100px;
+}
+.float-left {
+	background-color: beige;
+	height: 100px;
+	width: 600px;
+	float: left;
+}
+.float-right {
+	background-color: deepskyblue;
+	height: 100px;
+	width: 400px;
+	float: right;
+}
+.box {
+	width: 1000px;
+	height: 700px;
+	background-color: beige;
+}
+.left {
+	float: left;
+	width: 300px;
+	height: 700px;
+	background-color: lightskyblue;
+}
+.right-box {
+	float: left;
+	width: 300px;
+	height: 200px;
+	background-color: coral;
+	margin: 10px;
+}
