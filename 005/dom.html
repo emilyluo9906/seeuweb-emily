@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DOM GetElement</title>
+	<style type="text/css">
+		#view:hover {
+			cursor: pointer;
+		}
+		#view {
+			width: 25px;
+			height: 25px;
+		}
+		#dialog {
+			width: 100px;
+			height: 100px;
+			background-color: beige;
+		}
+	</style>
+</head>
+<body>
+	<h1>Get Element</h1>
+	<div id="list">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+
+	<h1 id="event-header">Event Listener</h1>
+	<button id="btn">Click Me</button>
+
+	<h1>Change Content</h1>
+	<button id="add">Add 1</button>
+	<button id="reset">Reset</button>
+	<p id="count">0</p>
+
+	<h1>Password</h1>
+	<div>
+		<input type="password" name="pwd" id="pwd">
+		<img src="./close.png" id="view">
+	</div>
+
+	<h1>Close Tab</h1>
+	<div>
+	<button id="hide_show_btn">Hide/Show</button>
+	<div id="dialog"></div>
+	</div>
+
+	<h1>onfucus/onblur</h1>
+	<div>
+		<input type="text" name="input" id="input" placeholder="搜索">
+	</div>
+
+	<h1>Button Groups</h1>
+	<div id="btn-group">
+		<button id="btn1">Button1</button>
+		<button id="btn2">Button2</button>
+		<button id="btn3">Button3</button>
+	</div>
+</body>
+<script>
+	var list = document.getElementById('list');
+	console.log(list);
+
+	var btn = document.getElementById('btn');
+	btn.onclick = function () {
+		console.log('button clicked');
+		alert('clicked');
+	}
+	btn.onmouseover = function () {
+		btn.style.color = 'red';
+		console.log('mouseover');
+	}
+
+	var add = document.getElementById('add');
+	var reset = document.getElementById('reset');
+	var count = document.getElementById('count');
+	add.onclick = function () {
+		count.innerText = parseInt(count.innerText, 10) + 1;
+	}
+	reset.onclick = function () {
+		count.innerText = 0;
+	}
+
+	var pwd = document.getElementById('pwd');
+	var view = document.getElementById('view');
+	view.onclick = function () {
+		pwd.type = pwd.type==='text'?'password':'text';
+		view.src = pwd.type==='text'?'open.png':'close.png';
+	}
+
+	var hide_show_btn = document.getElementById('hide_show_btn');
+	var dialog = document.getElementById('dialog');
+	hide_show_btn.onclick = function () {
+		dialog.style.display = dialog.style.display==='none'?'block':'none';
+	}
+
+	var btn_group = document.getElementById('btn-group').getElementsByTagName('button');
+	var btn1 = document.getElementById('btn1');
+	var btn2 = document.getElementById('btn2');
+	var btn3 = document.getElementById('btn3');
+	function btn_group_onclick(element) {
+		for (var i = btn_group.length - 1; i >= 0; i--) {
+			btn_group[i].style='background-color: default;'
+		}
+		element.target.style='background-color:gold';
+	}
+	btn1.onclick = btn_group_onclick;
+	btn2.onclick = btn_group_onclick;
+	btn3.onclick = btn_group_onclick;
+
+</script>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Node</title>
+	<style type="text/css">
+		ul>li>a{
+			display: block;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Parent Node/Child Nodes</h1>
+	<ul>
+		<li>node1</li>
+		<li>node2</li>
+		<li>node3</li>
+		<li>node4</li>
+	</ul>
+
+	<h1>Dropdown</h1>
+	<ul id="nav">
+		<li>
+			<a href="#">List1</a>
+			<ul style="display: none;">
+				<li><a href="#">SubList1</a></li>
+				<li><a href="#">SubList2</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">List2</a>
+			<ul style="display: none;">
+				<li><a href="#">SubList1</a></li>
+				<li><a href="#">SubList2</a></li>
+			</ul>
+		</li>
+	</ul>
+
+<script type="text/javascript">
+	var ul = document.querySelector('ul');
+	console.log(ul.nodeType);
+	console.log(ul.childNodes[0].nodeType);
+
+	var nav = document.getElementById('nav');
+	var list = nav.children;
+	for (var i = list.length - 1; i >= 0; i--) {
+		list[i].onmouseover = function () {
+			this.children[1].style.display = 'block';
+		}
+		list[i].onmouseout = function () {
+			this.children[1].style.display = 'none';
+		}
+	}
+</script>
+</body>
+</html>
